@@ -1,0 +1,30 @@
+#home-about{
+    height: 700vh;
+    // background-color: red;   
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    .about-title{
+        width: 130px !important;
+    }
+    .text-side{
+        background-color: red;
+        height: 100%;
+    }
+    h1{
+        font-size: 40px;
+    }
+    p{
+        font-size: 18px;
+        line-height: 27px;
+    }
+    .about-img{
+        display: flex;
+        justify-content: end;
+        height: 70vh;
+        .img{
+        width: 80%;
+        height: 100%;
+        }
+    }
+}
