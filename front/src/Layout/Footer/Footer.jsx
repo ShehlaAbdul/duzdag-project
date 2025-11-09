@@ -53,7 +53,7 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div className="right-side col-12 col-sm-6 m-0">
+          <div className="right-side col-12 col-sm-6 col-lg-4 m-0">
             <h5>Əlaqə</h5>
             <ul className="d-flex flex-column gap-3 p-0">
               <li>
