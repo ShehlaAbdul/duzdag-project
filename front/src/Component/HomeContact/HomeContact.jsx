@@ -22,8 +22,8 @@ function HomeContact() {
   
   return (
     <section id="home-contact">
-      <div className="contact container-fluid g-0">
-        <div className="contact-container">
+      <div className="contact container-fluid g-0 ">
+        <div className="contact-container px-3">
           <div className="contact-form d-flex flex-column align-items-center gap-2">
             <HeadTitle title={"Əlaqə"} />
             <h2>Sağlamlığınızı Duzdağda bərpa edin</h2>
@@ -34,7 +34,7 @@ function HomeContact() {
           </div>
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="form px-4 py-5 bg-light  w-50 mx-auto"
+            className="form px-4 py-5 bg-light mx-auto "
           >
             <div className="row mb-3">
               <div className="col-md-6">

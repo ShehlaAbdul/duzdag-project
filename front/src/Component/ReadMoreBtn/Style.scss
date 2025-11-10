@@ -1,15 +1,14 @@
 
 .read-more{
-    height: 48px;
-    width: 161px;
-    padding: 7px  10px ;
-    color: #FFFFFF;
-    background-color: #1B7CAF;
-    border-radius: 50px;
-    border: none;
+    height: 52px;
+    padding: 7px 16px;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 20px;
+    border-radius: 50px;
+    color: #FFFFFF;
+    background-color: #1B7CAF;
+    border: none;
     font-weight: 500;
     .arrow{
         background-color: #FFFFFF;
