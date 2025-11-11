@@ -1,0 +1,72 @@
+#sales{
+    padding: 5% 0%;
+    .sales{
+        display: flex;
+        flex-direction: column;
+        // padding: 0 5%;
+        .head-side{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            h1{
+                font-size: 40px;
+            }
+            p{
+                max-width: 750px;
+                padding:0 2%;
+                text-align: center;
+                font-size: 18px;
+                color: #465052;
+                font-weight: 500;
+                  font-family: "DM Sans", sans-serif;
+
+            }
+        }
+        
+        .sale-card{
+            // width: 356px;
+            min-height: 178px;
+            // padding: 25px 30px;
+            padding: 10px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items:center;
+            // gap: 10px;
+            border: 2px solid #1B7CAF;
+            border-radius: 20px;
+          
+        
+            p{
+                font-size: 18px;
+                color: #1C1C1C;
+                font-weight: 500;
+                text-align: center;
+                line-height: 20px;
+            }
+            span{
+                font-size: 18px;
+            }
+            .sale{
+                color: #1B7CAF;
+                font-weight: 600;
+            }
+            .card-img{
+                width: 50px;
+                height: 50px;
+
+            }
+        }
+    }
+    @media (max-width:768px){
+        .sales{
+            .sale-card{
+                padding: 20px 0px !important;
+            }
+            p{
+                font-size: 16px !important;
+            }
+        }
+    }
+}
