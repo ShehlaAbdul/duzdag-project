@@ -40,7 +40,7 @@ function Header() {
           </div>
         </div>
       </div>
-      <div className="navbar ">
+      <div className="navbar d-none ">
         <div className="container-fluid row ">
           <div className="logo col-auto">
             <Link to={"/"}>
