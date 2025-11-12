@@ -18,36 +18,16 @@
       align-items: center;
     }
   }
-  .custom-navbar{
+  .custom-navbar {
     height: 80px;
-    padding: 0 5%;
+    padding: 0 5% !important;
     position: fixed;
     width: 100%;
-    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+    transition: background-color 0.4s ease;
     background-color: #ffffff;
-    border-bottom: 2px solid blueviolet;
     z-index: 3;
-    
-  }  &.scroll {
-    transition: all 0.4s ease;
-    .custom-navbar {
-      background-color: #1b7caf;
-      top: 0;
-    }
-
-    .navbar a {
-      color: #f5efef !important;
-    }
-    .top-bar {
-      display: none;
-      height: 0;
-      transition: all 0.4s ease;
-    }
-    .galery-drop{
-      background-color: #1b7caf;
-    }
   }
-    &.scroll {
+  &.scroll {
     transition: all 0.4s ease;
     .custom-navbar {
       background-color: #1b7caf;
@@ -55,9 +35,8 @@
 
     .navbar a {
       color: #f5efef !important;
-      &:hover{
+      &:hover {
         color: #ffffff !important;
-
       }
     }
     .top-bar {
@@ -65,16 +44,23 @@
       height: 0;
       transition: all 0.4s ease;
     }
-    .galery-drop{
+    .galery-drop {
       background-color: #1b7caf;
+    }
+    .bar {
+      color: #ffffff !important;
+    }
+  }
+  .logo-side {
+    height: 50px;
+    .logo {
+      width: auto;
+      height: 50px; 
+      object-fit: cover;
+      object-position: center;
     }
   }
   .navbar {
-    .logo {
-      width: auto;
-      height: 57px;
-      object-fit: cover;
-    }
     a {
       color: #000 !important;
       text-decoration: none !important;
@@ -85,21 +71,20 @@
     .nav-link.active {
       color: #1b7caf !important;
     }
-    .galery:hover{
-        .arrow {
-          transition:  all 0.4s ease;
-          transform: rotate(180deg);
-        }
-        .galery-drop{
-          display: flex ;
-        }
-        
+    .galery:hover {
+      .arrow {
+        transition: all 0.4s ease;
+        transform: rotate(180deg);
       }
-      .galery{
-        position: relative;
-        .galery-drop{
-          top: 30px;
-          display: flex;
+      .galery-drop {
+        display: flex;
+      }
+    }
+    .galery {
+      position: relative;
+      .galery-drop {
+        top: 30px;
+        display: flex;
         flex-direction: column;
         border: 1px solid #1b7caf;
         padding: 10px;
@@ -112,60 +97,58 @@
     }
   }
   .sidebar {
-  position: fixed;
-  top: 0;
-  left: -260px;
-  width: 260px;
-  height: 100vh;
-  background-color: #fff;
-  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  z-index: 2000;
-  input{
-    border: none;
-    outline: none;
-    padding: 5px 10px;
-  
-  }
-  .nav-link{
-    width: 100%;
-    // border-bottom: 1px solid rgba(0, 0, 0, 0.302);
-  padding:  10px;
-  &:hover{
-    // color: $primary-color;
-    background-color: #F2F1FE;
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    z-index: 2000;
+    input {
+      border: none;
+      outline: none;
+      padding: 5px 10px;
+    }
+    .nav-link {
+      width: 100%;
+      // border-bottom: 1px solid rgba(0, 0, 0, 0.302);
+      padding: 10px;
+      &:hover {
+        // color: $primary-color;
+        background-color: #f2f1fe;
+      }
+    }
+    .nav-logo {
+      width: 100px;
+    }
 
-  }
-}
-  .nav-logo{
-    width: 100px;
-  }
+    &.open {
+      left: 0;
+    }
 
-  &.open {
-    left: 0;
-  }
+    .sidebar-link {
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
 
-  .sidebar-link {
-    color: #333;
-    text-decoration: none;
-    font-weight: 500;
-
-    &:hover {
-      color: #007bff;
+      &:hover {
+        color: #007bff;
+      }
     }
   }
-}
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #00000083;
-  z-index: 1000;
-}
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000083;
+    z-index: 1000;
+  }
 
-@media (max-width: 992px) {
+  @media (max-width: 992px) {
     .custom-navbar {
       top: 0;
     }
