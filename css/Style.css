@@ -35,13 +35,11 @@
 .header .custom-navbar .logo-side .logo {
   height: 60px;
   object-fit: cover;
-  border: 2px solid red;
 }
 .header .custom-navbar .logo-side .logo1 {
   width: 60px;
   height: 60px;
   object-fit: contain;
-  border: 2px solid rgb(187, 156, 156) !important;
 }
 .header.scroll {
   transition: all 0.4s ease;

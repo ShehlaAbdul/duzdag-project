@@ -26,26 +26,19 @@
     transition: background-color 0.4s ease;
     background-color: #ffffff;
     z-index: 3;
-     .logo-side {
-    height: 50px;
-    height: auto;
-    .logo {
-      // height: 45px;
-      height: 60px;
-  // width: auto;
-  object-fit: cover;
-  border: 2px solid red;
+    .logo-side {
+      height: 50px;
+      height: auto;
+      .logo {
+        height: 60px;
+        object-fit: cover;
+      }
+      .logo1 {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+      }
     }
-    .logo1{
-      // height: 100%;
-  // width: 100%;
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  border: 2px solid rgb(187, 156, 156) !important;
-    }
-
-  }
   }
   &.scroll {
     transition: all 0.4s ease;
@@ -71,7 +64,7 @@
       color: #ffffff !important;
     }
   }
- 
+
   .navbar {
     a {
       color: #000 !important;
