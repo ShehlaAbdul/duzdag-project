@@ -54,9 +54,9 @@
   .logo-side {
     height: 50px;
     .logo {
-      width: auto;
+      width: auto;  
       height: 50px; 
-      object-fit: cover;
+      object-fit: contain;
       object-position: center;
     }
   }
