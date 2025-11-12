@@ -52,7 +52,7 @@ function Header() {
             <Link to={"/"} className="logo">
               <img src={Logo2} alt="" />
             </Link>
-          <Link to={"/"} className="logo">
+          <Link to={"/"} className="logo ">
             <img src={scroll ? LogoWhite : Logo} alt="Logo" />
           </Link>
         </div>

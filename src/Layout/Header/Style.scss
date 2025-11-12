@@ -26,6 +26,26 @@
     transition: background-color 0.4s ease;
     background-color: #ffffff;
     z-index: 3;
+     .logo-side {
+    height: 50px;
+    height: auto;
+    .logo {
+      // height: 45px;
+      height: 60px;
+  // width: auto;
+  object-fit: contain;
+  border: 2px solid red;
+    }
+  //   .logo1{
+  //     height: 45px;
+  // width: 45px;
+  // object-fit: contain;
+  // border: 2px solid red !important  ;
+
+
+  //   }
+
+  }
   }
   &.scroll {
     transition: all 0.4s ease;
@@ -51,15 +71,7 @@
       color: #ffffff !important;
     }
   }
-  .logo-side {
-    // height: 50px;
-    height: auto;
-    .logo {
-      height: 45px;
-  width: auto;
-  object-fit: contain;
-    }
-  }
+ 
   .navbar {
     a {
       color: #000 !important;
