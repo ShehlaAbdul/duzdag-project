@@ -49,7 +49,7 @@ function Header() {
 
       <div className="custom-navbar navbar-expand-lg px-3  px-md-5 px-lg-1  d-flex align-items-center justify-content-between ">
         <div className="logo-side col-auto d-flex gap-2">
-            <Link to={"/"} className="logo">
+            <Link to={"/"} className="logo1">
               <img src={Logo2} alt="" />
             </Link>
           <Link to={"/"} className="logo ">

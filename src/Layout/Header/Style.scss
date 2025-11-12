@@ -36,14 +36,14 @@
   object-fit: cover;
   border: 2px solid red;
     }
-  //   .logo1{
-  //     height: 45px;
-  // width: 45px;
-  // object-fit: contain;
-  // border: 2px solid red !important  ;
-
-
-  //   }
+    .logo1{
+      // height: 100%;
+  // width: 100%;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border: 2px solid rgb(187, 156, 156) !important;
+    }
 
   }
   }
