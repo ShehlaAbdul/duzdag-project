@@ -34,7 +34,7 @@ function HomeAbout() {
               <ReadMoreBtn title={"Daha Ətraflı"} />
             </div>
           </div>
-          <div className="img-side border col-12 col-lg-5">
+          <div className="img-side  col-12 col-lg-5">
             <div className="img">
               <img src={AboutImg} alt="" className="" />
             </div>

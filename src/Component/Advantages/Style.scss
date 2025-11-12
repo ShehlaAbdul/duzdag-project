@@ -1,72 +1,128 @@
 #advantages {
-  border: 2px solid red;
   height: 100%;
   padding: 5%;
   .advantages {
- .text-side{
-       p {
-      // font-size: 38px;
-      color: #465052;
-      font-size: 18px;
-      padding-right: 30px;
-    }
-    h3 {
-      font-size: 24px;
+    .text-side {
+      display: flex;
+      flex-direction: column;
+      p {
+        color: #465052;
+        font-size: 18px;
+        padding-right: 40px;
+        font-weight: 500;
+      }
+      h3 {
+        font-size: 24px;
+      }
     }
     ul {
       li {
         display: flex;
-        align-items: center;
         line-height: 27px;
         font-size: 18px;
-        color: #2C2C2C;
+        // gap: 10px;
+        color: #2c2c2c;
       }
     }
- }
- .img-side{
+    .img-side {
       position: relative;
-//   max-width: 650px;
-  height: auto;
-//   width: 100%;
-  border: 1px solid red;
-  .main-img{
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  .second-img{
-    position: absolute;
-    bottom: 0;
-    left: -100px;
-    // right: -40%;
-  }
-  .badge-box{
-     position: absolute;
-    top: -5%;
-    right: 0%;
-    color: #fff;
-    border-radius: 16px;
-    padding: 10px;
-    // text-align: center;
-    background-color: #fff;
-    .box-container{
-    background-color: #007bff;
-    padding: 10px 13px;
-    border-radius: 20px;
+      // height: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      .main-img {
+        position: relative;
+        width: 100%;
+        height: 90%;
+      }
+      .second-img {
+        position: absolute;
+        bottom: 0;
+        left: -100px;
+      }
+      .badge-box {
+        // width: 25%;
+        position: absolute;
+        top: -5%;
+        right: 0%;
+        color: #fff;
+        border-radius: 16px;
+        padding: 10px;
+        background-color: #fff;
+        .box-container {
+          background-color:#1B7CAF;
+          padding: 15px 13px;
+          border-radius: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
     }
   }
- }
-  }
-  @media (max-width:1204px){
-    .advantages{
-        .text-side{
-            padding-bottom: 50px;
-    }
-    .img-side{
-    width: 90% !important; 
+  @media (max-width: 1204px) {
+    .advantages {
+      .text-side {
+        padding-bottom: 50px;
+        
+      }
+      .img-side {
+        width: 100% !important;
         padding: 0;
-        border: 1px solid red !important;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        .main-img {
+          width: 80%;
+        }
+        .second-img {
+          left: 20px !important;
+        }
+        .badge-box {
+          position: absolute;
+          top: -10%;
+        }
+      }
     }
+  }
+  @media (max-width: 768px) {
+    .text-side {
+      padding-bottom: 0 !important;
+      h1 {
+        font-size: 24px !important;
+      }
+      p {
+        font-size: 16px !important;
+        padding-right: 0px !important;
+      }
+    }
+    h3{
+      font-size: 20px;
+    }
+    .img-side {
+      .main-img {
+        width: 100% !important;
+      }
+      .second-img {
+        display: none !important;
+      }
+      .badge-box {
+        padding: 7px !important;
+        h4 {
+          font-size: 20px !important;
+        }
+        p {
+          font-size: 14px !important;
+        }
+        .box-container {
+          gap: 0px !important;
+        }
+      }
+    }
+    .environment{
+      h1{
+        font-size: 20px !important;
+      }
     }
   }
 }
