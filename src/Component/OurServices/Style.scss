@@ -36,9 +36,9 @@
           .hover-bar {
             width: 100%;
           }
-          img {
-            display: none;
-          }
+        //   img {
+        //     display: none;
+        //   }
           .second-img {
             display: block !important;
           }
@@ -62,12 +62,16 @@
             border-radius: 20px;
             object-fit: cover;
             object-position: center center;
+            width: 100%;
+            height: 100%;
           }
           .second-img {
             position: absolute;
             top: 0;
             right: 0;
             display: none;
+            width: 100%; // ✅
+            height: 100%;
           }
         }
         .card-desc {
@@ -77,10 +81,10 @@
           justify-content: space-between;
           gap: 20px;
           position: relative;
-          font-size:18px;
+          font-size: 18px;
           font-weight: 500;
           color: #1c1c1c;
-        //   letter-spacing: 0.3px;
+          //   letter-spacing: 0.3px;
           h3 {
             color: #1b7caf;
             font-size: 24px;
@@ -88,6 +92,7 @@
           }
         }
         .hover-bar {
+          position: relative;
           height: 1px;
           width: 100%;
           background: #c0cbd5;
@@ -96,6 +101,7 @@
           transition: left 10ms ease-in-out, background-color 1s ease;
           .dot {
             position: absolute;
+            top: 50%;
             left: 0;
             transform: translate(-50%, -50%);
             width: 10px;
@@ -122,15 +128,15 @@
       .services-cards {
         justify-content: center;
         .services-card {
-          .card-desc{
+          .card-desc {
             gap: 10px;
             padding-top: 15px !important;
 
-            h3{
-                font-size: 20px !important;
+            h3 {
+              font-size: 20px !important;
             }
-            p{
-                font-size: 16px;
+            p {
+              font-size: 16px;
             }
           }
         }
