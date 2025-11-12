@@ -34,7 +34,7 @@
 }
 .header .custom-navbar .logo-side .logo {
   height: 60px;
-  object-fit: contain;
+  object-fit: cover;
   border: 2px solid red;
 }
 .header.scroll {
