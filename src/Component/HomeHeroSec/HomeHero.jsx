@@ -12,7 +12,7 @@ function HomeHero() {
             Təbiətin şəfalı gücü və peşəkar yanaşma ilə nəfəsinizi,
             sağlamlığınızı və rahatlığınızı geri qazanın.
           </p>
-          <div className="btn">
+          <div className="">
             {" "}
             <ReadMoreBtn title={"Ətraflı öyrən"} />
           </div>

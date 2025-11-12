@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./Style.scss";
 import Mail from "../../assets/icons/mail.svg";
 import Phone from "../../assets/icons/phone.svg";
-import Logo from "../../assets/images/logo-blue.webp";
+import Logo from "../../assets/images/logo_blue.webp";
 import LogoWhite from "../../assets/images/logo_white.webp";
-import Logo2 from "../../assets/images/logo-pasha.webp"
+import Logo2 from "../../assets/images/logo-pasha2.webp";
 import { Link } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 import { LiaTimesSolid } from "react-icons/lia";
@@ -14,7 +14,9 @@ import { HiBars3 } from "react-icons/hi2";
 
 function Header() {
   const [scroll, setScroll] = useState(false);
-   const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isOpenGalery, setIsOpenGalery] = useState(false);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,10 +50,10 @@ function Header() {
       </div>
 
       <div className="custom-navbar navbar-expand-lg px-3  px-md-5 px-lg-1  d-flex align-items-center justify-content-between ">
-        <div className="logo-side col-auto d-flex gap-2">
-            <Link to={"/"} className="logo1">
-              <img src={Logo2} alt="" />
-            </Link>
+        <div className="logo-side col-auto d-flex gap-4">
+          <Link to={"/"} className="logo1">
+            <img src={Logo2} alt="" />
+          </Link>
           <Link to={"/"} className="logo ">
             <img src={scroll ? LogoWhite : Logo} alt="Logo" />
           </Link>
@@ -123,15 +125,31 @@ function Header() {
             <Link to="/services" className="nav-link">
               Xidmətlər
             </Link>
-            <Link to="/products" className="nav-link">
-              Məhsullar
-            </Link>
-            <Link to="/news" className="nav-link">
-              Xəbərlər
-            </Link>
-            <Link to="/partners" className="nav-link">
-              Partnyorlar
-            </Link>
+
+            <div
+              className={`nav-link galery-mobile d-flex align-items-center ${
+                isOpenGalery ? "active" : ""
+              }`}
+              onClick={() => setIsOpenGalery(!isOpenGalery)}
+            >
+              <span className="pe-1">Qalereya</span>
+              <div>
+                <IoIosArrowDown
+                  className={`arrow ${isOpenGalery ? "rotate" : ""}`}
+                />
+              </div>
+            </div>
+            {isOpenGalery && (
+              <div className="galery-drop-mobile">
+                <span>
+                  <Link to="/gallery-photos">Şəkillər</Link>
+                </span>
+                <span>
+                  <Link to="/gallery-videos">Videolar</Link>
+                </span>
+              </div>
+            )}
+
             <Link to="/contact" className="nav-link">
               Əlaqə
             </Link>

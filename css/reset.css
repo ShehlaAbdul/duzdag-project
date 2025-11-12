@@ -6,6 +6,9 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "DM Sans", sans-serif;
+}
 body img {
   width: 100%;
   height: 100%;
