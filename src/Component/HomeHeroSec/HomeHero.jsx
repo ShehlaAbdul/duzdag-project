@@ -2,6 +2,7 @@ import React from 'react';
 import "./Style.scss";
 import ReadMoreBtn from '../ReadMoreBtn/ReadMoreBtn';
 import Vector from "../../assets/images/vector.png";
+import { Link } from 'react-router-dom';
 function HomeHero() {
   return (
     <section id="hero-sec" className="hero-sec  ">
@@ -12,10 +13,10 @@ function HomeHero() {
             Təbiətin şəfalı gücü və peşəkar yanaşma ilə nəfəsinizi,
             sağlamlığınızı və rahatlığınızı geri qazanın.
           </p>
-          <div className="">
+          <Link to={"/about"}>
             {" "}
             <ReadMoreBtn title={"Ətraflı öyrən"} />
-          </div>
+          </Link>
         </div>
         <div className="hero-badge">
           <p>“1979-cu ildən sizinləyik!”</p>

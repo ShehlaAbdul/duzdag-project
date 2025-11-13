@@ -29,7 +29,7 @@ function HomeGalery() {
     <section id="home-galery">
       <div className="home-galery continer-fluid g-0">
         <div className="head-side d-flex  align-items-center row ">
-          <div className="head-text d-flex flex-column col-7 ">
+          <div className="head-text d-flex flex-column col-12 col-md-7 ">
             <div>
               {" "}
               <HeadTitle title={"Qalereya"} />

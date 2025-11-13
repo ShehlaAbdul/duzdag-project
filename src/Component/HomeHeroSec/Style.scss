@@ -15,7 +15,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    z-index: -1;
+    // z-index: -1;
     .text-side{
         color: #ffff;
         max-width: 620px;
@@ -28,6 +28,7 @@
         p{
             font-size: 18px;
         }
+     
        
     }
      .hero-badge {

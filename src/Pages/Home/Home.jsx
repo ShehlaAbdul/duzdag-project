@@ -6,6 +6,7 @@ import HomeHero from '../../Component/HomeHeroSec/HomeHero';
 import Sales from '../../Component/Sales/Sales';
 import { Helmet } from 'react-helmet-async';
 import HomeGalery from '../../Component/HomeGalery/HomeGalery';
+import HomeServices from '../../Component/HomeServices/HomeServices';
 
 
 function Home() {
@@ -17,6 +18,7 @@ function Home() {
       </Helmet>
       <HomeHero />
       <HomeAbout />
+      <HomeServices/>
       <HomeGalery/>
       <Sales />
       <HomeContact />

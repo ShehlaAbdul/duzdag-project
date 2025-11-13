@@ -4,6 +4,7 @@ import HeadTitle from "../HeadTitle/HeadTitle";
 import ReadMoreBtn from "../ReadMoreBtn/ReadMoreBtn";
 import AboutImg from "../../assets/images/about-img.jpg";
 import { GiCheckMark } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 
 function HomeAbout() {
@@ -30,9 +31,9 @@ function HomeAbout() {
               təmizləyir, immuniteti gücləndirir və ümumi orqanizm sağlamlığını
               bərpa edir.
             </p>
-            <div>
+            <Link to={"about"}>
               <ReadMoreBtn title={"Daha Ətraflı"} />
-            </div>
+            </Link>
           </div>
           <div className="img-side  col-12 col-lg-5">
             <div className="img">
