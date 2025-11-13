@@ -5,27 +5,41 @@ import Phone from "../../assets/icons/phone.svg";
 import Logo from "../../assets/images/logo_blue.webp";
 import LogoWhite from "../../assets/images/logo_white.webp";
 import Logo2 from "../../assets/images/logo-pasha2.webp";
-import { Link } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 import { LiaTimesSolid } from "react-icons/lia";
 // import Logo from "../../assets/images/nav-logo.webp";
 import { IoSearchOutline } from "react-icons/io5";
 import { HiBars3 } from "react-icons/hi2";
 
+
 function Header() {
-  const [scroll, setScroll] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-  const [isOpenGalery, setIsOpenGalery] = useState(false);
+  const [scroll, setScroll] = useState(false); //scroll state
+  const [isOpen, setIsOpen] = useState(false); //sidebar state
+  const [isOpenGalery, setIsOpenGalery] = useState(false); //mobile galery dropdown state
+  // const [galleryType, setGalleryType] = useState("photos"); //photos or videos state 
 
-
+  const navigate = useNavigate(); //router navigate function
+ 
+  // Change header on scroll
   useEffect(() => {
     const handleScroll = () => {
       setScroll(window.scrollY > 100);
     };
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   const toggleSidebar = () => setIsOpen(!isOpen);
+
+  const handleGalleryChange = (e) => {
+    const selected = e.target.value;
+    setGalleryType(selected);
+    navigate("/gallery"); // qalereya səhifəsinə yönləndir
+  };
+
+
 
   const linkClass = ({ isActive }) =>
     isActive ? "nav-link active" : "nav-link";
@@ -82,10 +96,10 @@ function Header() {
               </Link>
               <div className="galery-drop">
                 <span>
-                  <Link to={"/gallery-photos"}>Şəkillər</Link>
+                  <Link to="/gallery/photos">Şəkillər</Link>
                 </span>
                 <span>
-                  <Link to={"gallery-videos"}>Videolar</Link>
+                  <Link to="/gallery/videos">Videolar</Link>
                 </span>
               </div>
             </li>
@@ -145,7 +159,7 @@ function Header() {
                   <Link to="/gallery-photos">Şəkillər</Link>
                 </span>
                 <span>
-                  <Link to="/gallery-videos">Videolar</Link>
+                  <Link to="/gallery/videos">Videolar</Link>
                 </span>
               </div>
             )}
@@ -157,53 +171,8 @@ function Header() {
         </div>
       </div>
       {isOpen && <div className="overlay" onClick={toggleSidebar}></div>}
-      {/* <div className="navbar mx-auto d-none d-lg-flex gap-2 align-items-center">
-        <div className="container-fluid row ">
-          <div className="logo col-auto">
-            <Link to={"/"}>
-              <img src={scroll ? LogoWhite : Logo} alt="Logo" />
-            </Link>
-          </div>
-          <div className="right-side col    d-flex justify-content-center ">
-            <ul className="d-flex gap-4  m-0 py-3">
-              <li className="nav-item py-1">
-                <Link to={"/"} className={linkClass}>
-                  Ana səhifə
-                </Link>
-              </li>
-              <li className="nav-item py-1">
-                <Link to={"/about"} className={linkClass}>
-                  Haqqımızda
-                </Link>
-              </li>
-              <li className="nav-item py-1">
-                <Link to={"/services"} className={linkClass}>
-                  Xidmətlər
-                </Link>
-              </li>
-              <li className="galery py-1">
-                <Link to={"/gallery"} className="galery-link">
-                  <span className="pe-1">Qalereya</span>
-                  <IoIosArrowDown className="arrow" />
-                </Link>
-                <div className="galery-drop">
-                  <span>
-                    <Link to={"/gallery-photos"}>Şəkillər</Link>
-                  </span>
-                  <span>
-                    <Link to={"gallery-videos"}>Videolar</Link>
-                  </span>
-                </div>
-              </li>
-              <li className="nav-item py-1">
-                <Link to={"/contact-us"} className={linkClass}>
-                  Əlaqə
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div> */}
+      {/* <Outlet context={{ galleryType }} /> */}
+      {/* <Outlet context={{ galleryType, setGalleryType }} /> */}
     </div>
   );
 }

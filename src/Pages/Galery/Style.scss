@@ -1,0 +1,40 @@
+#gallery{
+    .gallery-container{
+        padding: 5%;
+        .head-text{
+            h1{
+                font-size: 40px;
+                color: #1C1C1C;
+            }
+            p{
+                font-size: 18px;
+                font-weight: 500;
+                color: #465052;
+            }
+        }
+        .media-container{
+            img{
+                border-radius: 20px;
+                height: 250px;
+                object-fit: cover;
+            }
+             video{
+                border-radius: 20px;
+                height: 250px;
+                object-fit: cover;
+            }
+          
+           
+        }
+    }
+    @media (max-width:768px){
+       .gallery-container{
+         img{
+            height: 208px !important;
+        }
+        video{
+            height: 208px !important;
+        }
+       }
+    }
+}
