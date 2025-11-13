@@ -1,29 +1,61 @@
-import React from 'react';
+import React from "react";
 import "./Style.scss";
-import HeroSec from '../../Component/HeroSec/HeroSec';
+import HeroSec from "../../Component/HeroSec/HeroSec";
 import { useForm } from "react-hook-form";
 import { GrLocation } from "react-icons/gr";
 import { FiMail } from "react-icons/fi";
 import { FiPhone } from "react-icons/fi";
-
-
+import { Helmet } from "react-helmet-async";
+import axios from "axios";
+import Swal from "sweetalert2";
 
 function ContactPage() {
-     const {
-       register,
-       handleSubmit,
-       reset,
-       formState: { errors },
-      } = useForm();
-    
-        const onSubmit = (data) => {
-          console.log(data);
-          alert("Form uğurla göndərildi!");
-          reset();
-      };
-      
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+
+const onSubmit = async (data) => {
+try {
+    const payload = {
+      firstName: data.firstName,
+      lastName: data.lastName,
+      emailAdress: data.email,
+      phoneNumber: data.phone,
+      inputMessage: data.message,
+    };
+
+    await axios.post("https://admin.duzdagmualice.az/api/contacts", payload, {
+      headers: { "Content-Type": "application/json" },
+    });
+
+    Swal.fire({
+      icon: "success",
+      title: "Uğurlu!",
+      text: "Mesajınız göndərildi, ən qısa zamanda sizinlə əlaqə saxlanılacaq.",
+      confirmButtonText: "Bağla",
+    });
+
+    reset();
+  } catch (error) {
+    console.error("Xəta cavabı:", error.response?.data || error);
+    Swal.fire({
+      icon: "error",
+      title: "Xəta!",
+      text: "Mesaj göndərilərkən problem yarandı. Zəhmət olmasa yenidən cəhd edin.",
+      confirmButtonText: "Bağla",
+    });
+  }
+};
+
   return (
     <>
+      <Helmet>
+        <title>Əlaqə | Duzdağ Müalicə Mərkəzi</title>
+        <meta />
+      </Helmet>
       <HeroSec title={"Əlaqə"} />
       <section id="contact-page" className="container-fluid">
         <div className="contact-page row g-0">
@@ -151,8 +183,8 @@ function ContactPage() {
         <div className="map ">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5301.109497626237!2d45.31437887313866!3d39.2876970947301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x401435a982f8726b%3A0x7d3e011dbf9d3e57!2zRHV6ZGHEnywgRTAwMiwgRHV6ZGHEn8SxIFlvbHUsIDY3MDA!5e0!3m2!1saz!2saz!4v1762809105112!5m2!1saz!2saz"
-                      height="100%"
-                      width={"100%"}
+            height="100%"
+            width={"100%"}
             style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"

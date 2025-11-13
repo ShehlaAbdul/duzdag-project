@@ -1,0 +1,40 @@
+#home-galery  {
+    background-color: #F9F9F9;
+    padding: 3% 5%;
+    .home-galery{
+        .head-text{
+            gap: 16px;
+            h1{
+                color: #2C2C2C;
+            }
+            p{
+                font-size: 18px;
+                font-weight: 500;
+                color: #465052;
+                // padding-right: 2%;
+                // max-width: 640px;
+            }
+        }
+        .galery{
+            padding-top: 40px;
+        }
+        .img{
+            border: 20px;
+            overflow: hidden;
+            img{
+                border: 30px !important;
+                border: 3px solid red;
+            }
+        }
+        .chevr{
+            border: 1px solid #191919;
+            background-color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 88px;
+            height: 56px;
+            border-radius: 70px;
+        }
+    }
+}

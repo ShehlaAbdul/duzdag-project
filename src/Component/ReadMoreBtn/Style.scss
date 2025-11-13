@@ -10,6 +10,7 @@
     background-color: #1B7CAF;
     border: none;
     font-weight: 500;
+    outline: none;
     .arrow{
         background-color: #FFFFFF;
         padding: 5px;
@@ -19,13 +20,13 @@
     transition: transform 0.3s ease;
     display: inline-block;
     color: #000;
-    transform: rotate(60deg);
+    transform: rotate(50deg);
 }
 
     &:hover{
         // color: red !important;
         .arrow{
-            transform: rotate(0deg);
+            transform: rotate(90deg);
         }
     }
 }

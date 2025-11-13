@@ -5,6 +5,7 @@ import AboutPage from "./Pages/AboutPage/AboutPage";
 import Services from "./Pages/Services/Services";
 import Galery from "./Pages/Galery/Galery.jsx";
 import ContactPage from "./Pages/ContactPage/ContactPage.jsx";
+import NotFound from "./Pages/NotFound/NotFound.jsx";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/gallery/:type" element={<Galery />} />
           <Route path="/contact-us" element={<ContactPage />} />
         </Route>
+        <Route path="*" element={ <NotFound/>} />
       </Routes>
     </BrowserRouter>
   );

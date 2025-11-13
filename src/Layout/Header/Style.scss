@@ -1,5 +1,9 @@
 .header {
   margin-bottom: 80px;
+  padding-bottom: 10px;
+  width: 100%;
+
+  // padding-bottom: 20px;
   .top-bar {
     padding: 0 5%;
     background-color: #1c1c1c;
@@ -30,24 +34,26 @@
     font-size: 18px;
     .logo-side {
       // height: 80px;
-      padding: 5px;
-      width: auto;
+      // padding: 5px;
+      // width: auto;
       .logo {
         object-fit: cover;
-        height: 60px;
-        width: 104px;
+        height: 70px;
+        width: auto;
       }
       .logo1 {
-        object-fit: contain;
-        height: 60px;
-        width: 90px;
+        object-fit: cover;
+        height: 70px; 
+        width: auto;
       }
     }
   }
   &.scroll {
     transition: all 0.4s ease;
     .custom-navbar {
-      background-color: #1b7caf;
+      background-color: #1b7baf65;
+      backdrop-filter: blur(40px); /* əsas blur effekti */
+  -webkit-backdrop-filter: blur(10px);
     }
     .logo1 {
         object-fit: contain;
@@ -68,7 +74,9 @@
       transition: all 200ms ease;
     }
     .galery-drop {
-      background-color: #1b7caf;
+      background-color: #1b7baf65 !important;
+      backdrop-filter: blur(10px) !important; /* əsas blur effekti */
+  -webkit-backdrop-filter: blur(40px) !important;
     }
     .bar {
       color: #ffffff !important;

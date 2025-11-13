@@ -3,6 +3,8 @@ import "./Style.scss";
 import HeadTitle from "../HeadTitle/HeadTitle";
 import { useForm } from "react-hook-form";
 import Overlay from "../../assets/images/contact-overlay.webp";
+import Swal from "sweetalert2";
+import axios from "axios";
 
 
 
@@ -14,11 +16,39 @@ function HomeContact() {
    formState: { errors },
   } = useForm();
 
-    const onSubmit = (data) => {
-      console.log(data);
-      alert("Form uğurla göndərildi!");
-      reset();
-  };
+const onSubmit = async (data) => {
+  try {
+    const payload = {
+      firstName: data.firstName,
+      lastName: data.lastName,
+      emailAdress: data.email,
+      phoneNumber: data.phone,
+      inputMessage: data.message,
+    };
+
+    await axios.post("https://admin.duzdagmualice.az/api/contacts", payload, {
+      headers: { "Content-Type": "application/json" },
+    });
+
+    Swal.fire({
+      icon: "success",
+      title: "Uğurlu!",
+      text: "Mesajınız göndərildi, ən qısa zamanda sizinlə əlaqə saxlanılacaq.",
+      confirmButtonText: "Bağla",
+    });
+
+    reset();
+  } catch (error) {
+    console.error("Xəta cavabı:", error.response?.data || error);
+    Swal.fire({
+      icon: "error",
+      title: "Xəta!",
+      text: "Mesaj göndərilərkən problem yarandı. Zəhmət olmasa yenidən cəhd edin.",
+      confirmButtonText: "Bağla",
+    });
+  }
+};
+
   
   return (
     <section id="home-contact">

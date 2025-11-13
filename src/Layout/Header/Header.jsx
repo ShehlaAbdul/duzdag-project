@@ -3,10 +3,10 @@ import "./Style.scss";
 import Mail from "../../assets/icons/mail.svg";
 import Phone from "../../assets/icons/phone.svg";
 import Logo from "../../assets/images/logo_blue.webp";
-import LogoWhite from "../../assets/images/logo_white.webp";
+import LogoWhite from "../../assets/images/logo-white.png";
 import Logo2 from "../../assets/images/logo-pasha2.webp";
 import Logo3 from "../../assets/images/logo_pasha3.webp";
-import { Link, Outlet, useNavigate } from "react-router-dom";
+import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 import { LiaTimesSolid } from "react-icons/lia";
 // import Logo from "../../assets/images/nav-logo.webp";
@@ -25,7 +25,7 @@ function Header() {
   // Change header on scroll
   useEffect(() => {
     const handleScroll = () => {
-      setScroll(window.scrollY > 100);
+      setScroll(window.scrollY > 10);
     };
     handleScroll();
     window.addEventListener("scroll", handleScroll);
@@ -45,9 +45,9 @@ function Header() {
   const linkClass = ({ isActive }) =>
     isActive ? "nav-link active" : "nav-link";
   return (
-    <div className={`header ${scroll ? "scroll" : ""}`}>
+    <div className={`header  ${scroll ? "scroll" : ""}`}>
       <div className="top-bar d-none d-lg-flex">
-        <div className="content container-fluid d-flex">
+        <div className="content container-fluid d-flex g-0">
           <div className="d-flex align-items-center gap-2">
             <div className="icon">
               {" "}
@@ -64,26 +64,26 @@ function Header() {
         </div>
       </div>
 
-      <div className="custom-navbar navbar-expand-lg px-3  px-md-5 px-lg-1  d-flex align-items-center justify-content-between ">
-        <div className="logo-side col-auto d-flex gap-4">
+      <div className="custom-navbar navbar-expand-lg  d-flex align-items-center justify-content-between row g-0 ">
+        <div className="logo-side col-6 col-md-3 d-flex gap-2 ">
           <Link to={"/"} className="logo1">
             <img src={scroll ? Logo3 : Logo2} alt="Logo" />
           </Link>
           <Link to={"/"} className="logo ">
             <img src={scroll ? LogoWhite : Logo} alt="Logo" />
           </Link>
-        </div>
-        <div className="navbar mx-auto d-none d-lg-flex gap-2 align-items-center">
+        </div>  
+        <div className="navbar  d-none d-lg-flex gap-2 align-items-center justify-content-center col-6 ">
           <ul className="d-flex gap-4 m-0">
             <li className="nav-item py-1">
-              <Link to={"/"} className={linkClass}>
+              <NavLink to={"/"} className={linkClass}>
                 Ana səhifə
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item py-1">
-              <Link to={"/about"} className={linkClass}>
+              <NavLink to={"/about"} className={linkClass}>
                 Haqqımızda
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item py-1">
               <Link to={"/services"} className={linkClass}>
@@ -91,27 +91,30 @@ function Header() {
               </Link>
             </li>
             <li className="galery py-1">
-              <Link className="galery-link">
+              <NavLink className="galery-link">
                 <span className="pe-1">Qalereya</span>
                 <IoIosArrowDown className="arrow" />
-              </Link>
+              </NavLink>
               <div className="galery-drop">
                 <span>
-                  <Link to="/gallery/photos">Şəkillər</Link>
+                  <NavLink to="/gallery/photos">Şəkillər</NavLink>
                 </span>
                 <span>
-                  <Link to="/gallery/videos">Videolar</Link>
+                  <NavLink to="/gallery/videos">Videolar</NavLink>
                 </span>
               </div>
             </li>
             <li className="nav-item py-1">
-              <Link to={"/contact-us"} className={linkClass}>
+              <NavLink to={"/contact-us"} className={linkClass}>
                 Əlaqə
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>
-        <div className="d-flex justify-content-end align-items-center gap-0">
+        {/* <div className="col-3 border ">
+          h
+        </div> */}
+        <div className="d-flex justify-content-end align-items-center gap-0 col-3">
           <div className="d-block d-lg-none  " onClick={toggleSidebar}>
             <HiBars3 size={20} className="bar" />
           </div>
@@ -157,7 +160,7 @@ function Header() {
             {isOpenGalery && (
               <div className="galery-drop-mobile">
                 <span>
-                  <Link to="/gallery-photos">Şəkillər</Link>
+                  <Link to="/gallery/photos">Şəkillər</Link>
                 </span>
                 <span>
                   <Link to="/gallery/videos">Videolar</Link>
@@ -165,7 +168,7 @@ function Header() {
               </div>
             )}
 
-            <Link to="/contact" className="nav-link">
+            <Link to="/contact-us" className="nav-link">
               Əlaqə
             </Link>
           </div>
