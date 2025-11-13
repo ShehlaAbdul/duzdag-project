@@ -4,6 +4,7 @@ import Home from "./Pages/Home/Home";
 import AboutPage from "./Pages/AboutPage/AboutPage";
 import Services from "./Pages/Services/Services";
 import Galery from "./Pages/Galery/Galery.jsx";
+import ContactPage from "./Pages/ContactPage/ContactPage.jsx";
 
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/gallery/:type" element={<Galery/>} />
+          <Route path="/gallery/:type" element={<Galery />} />
+          <Route path="/contact-us" element={<ContactPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

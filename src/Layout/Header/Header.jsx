@@ -5,6 +5,7 @@ import Phone from "../../assets/icons/phone.svg";
 import Logo from "../../assets/images/logo_blue.webp";
 import LogoWhite from "../../assets/images/logo_white.webp";
 import Logo2 from "../../assets/images/logo-pasha2.webp";
+import Logo3 from "../../assets/images/logo_pasha3.webp";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 import { LiaTimesSolid } from "react-icons/lia";
@@ -66,7 +67,7 @@ function Header() {
       <div className="custom-navbar navbar-expand-lg px-3  px-md-5 px-lg-1  d-flex align-items-center justify-content-between ">
         <div className="logo-side col-auto d-flex gap-4">
           <Link to={"/"} className="logo1">
-            <img src={Logo2} alt="" />
+            <img src={scroll ? Logo3 : Logo2} alt="Logo" />
           </Link>
           <Link to={"/"} className="logo ">
             <img src={scroll ? LogoWhite : Logo} alt="Logo" />
@@ -90,7 +91,7 @@ function Header() {
               </Link>
             </li>
             <li className="galery py-1">
-              <Link to={"/gallery"} className="galery-link">
+              <Link className="galery-link">
                 <span className="pe-1">Qalereya</span>
                 <IoIosArrowDown className="arrow" />
               </Link>

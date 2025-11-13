@@ -45,6 +45,24 @@ footer{
             color: #fff;
             font-size: 18px;
         }
+        .galery-drop-mobile {
+    padding-left: 30px;
+    display: flex;
+      flex-direction: column;
+      gap: 10px;
+    span{
+          font-size: 18px;
+    }
+    
+   
+      a{
+        color: inherit;
+      }
+      }
+     
+          .arrow.rotate {
+      transform: rotate(180deg);
+    }
     }
     .right-side{
          h5{

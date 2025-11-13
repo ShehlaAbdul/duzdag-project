@@ -49,6 +49,11 @@
     .custom-navbar {
       background-color: #1b7caf;
     }
+    .logo1 {
+        object-fit: contain;
+        height: 60px !important;
+        width: 60px !important;
+      }
 
     .navbar a {
       color: #f5efef !important;
@@ -57,9 +62,10 @@
       }
     }
     .top-bar {
-      display: none;
-      height: 0;
-      transition: all 0.4s ease;
+      height: 0;       // display:none əvəzinə
+      opacity: 0;      // gözəl transition üçün
+      overflow: hidden;
+      transition: all 200ms ease;
     }
     .galery-drop {
       background-color: #1b7caf;

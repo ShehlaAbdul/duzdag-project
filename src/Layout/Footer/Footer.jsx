@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from "react";
 import "./Style.scss";
 import Logo from "../../assets/images/logo-white.png";
 import LogoPasha from "../../assets/images/logo-pasha.webp";
@@ -7,10 +7,11 @@ import Instagram from "../../assets/icons/Instagram.svg";
 import { FiMail } from "react-icons/fi";
 import { FiPhone } from "react-icons/fi";
 import { GrLocation } from "react-icons/gr";
-import { Link } from 'react-router-dom';
-
+import { Link } from "react-router-dom";
+import { IoIosArrowDown } from "react-icons/io";
 
 function Footer() {
+  const [isOpenGalery, setIsOpenGalery] = useState(false);
   return (
     <footer>
       <div className="footer container-fluid g-0">
@@ -24,8 +25,9 @@ function Footer() {
               <h3>“ Duzdağ Müalicə Mərkəzi ” MMC</h3>
               <p>
                 {" "}
-                Təbiətin şəfalı gücü ilə sağlamlığınızı Duz Dağda yenidən kəşf
-                edin. Nəfəs alın, rahatlayın, sağalın.
+                Duzdağ Müalicə Mərkəzi” Məhdud Məsuliyyətli Cəmiyyəti Naxçıvan
+                Muxtar Respublikası Həmkarlar İttifaqları Şurasının tabeliyində
+                fəaliyyət göstərir.
               </p>
             </div>
             <div className="icons-side d-flex">
@@ -46,7 +48,29 @@ function Footer() {
                 <Link to={"/services"}>Xidmətlər</Link>
               </li>
               <li>
-                <Link to={"/gallery"}>Qalereya</Link>
+                <div
+                  className={`nav-link galery-mobile d-flex align-items-center ${
+                    isOpenGalery ? "active" : ""
+                  }`}
+                  onClick={() => setIsOpenGalery(!isOpenGalery)}
+                >
+                  <Link className="pe-2">Qalereya</Link>
+                  <div>
+                    <IoIosArrowDown
+                      className={`arrow ${isOpenGalery ? "rotate" : ""}`}
+                    />
+                  </div>
+                </div>
+                {isOpenGalery && (
+                  <div className="galery-drop-mobile">
+                    <span>
+                      <Link to="/gallery-photos">Şəkillər</Link>
+                    </span>
+                    <span>
+                      <Link to="/gallery/videos">Videolar</Link>
+                    </span>
+                  </div>
+                )}
               </li>
               <li>
                 <Link to={"/contact-us"}>Əlaqə</Link>
