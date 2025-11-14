@@ -65,7 +65,7 @@ function Header() {
       </div>
 
       <div className="custom-navbar navbar-expand-lg  d-flex align-items-center justify-content-between row g-0 ">
-        <div className="logo-side col-6 col-md-3 d-flex gap-2 ">
+        <div className="logo-side col-6 col-md-3  gap-2 d-flex ">
           <Link to={"/"} className="logo1">
             <img src={scroll ? Logo3 : Logo2} alt="Logo" />
           </Link>

@@ -38,12 +38,21 @@
       // width: auto;
       .logo {
         object-fit: contain;
-        height: 70px;
+        height: 60px;
+        img{
+          height: 60px;
+          width: auto;
+          border: 2px solid red;
+        }
         // width: auto; 
       }
       .logo1 {
-        object-fit: cover;
-        height: 70px; 
+        object-fit :contain;
+        img{
+          height: 60px;
+          width: auto;
+          border: 1px solid red;
+        } 
         // width: auto;
       }
     }
