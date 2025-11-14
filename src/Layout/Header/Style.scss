@@ -203,14 +203,16 @@
  @media (max-width:576px) {
   .logo-side {
     // gap: 10px !important;
-    border: 1px solid rgb(18, 216, 94);
-    width: 80% !important;
+    border: 1px solid rgb(169, 198, 39);
+    // width: 80% !important;
     .logo1{
       // width: auto;
+      height: 50px !important;
       height: 50px !important;
     }
     .logo{
       height: 50px !important;
+      width: auto !important;
     }
    
   }
