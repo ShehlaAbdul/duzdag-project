@@ -33,27 +33,20 @@
     z-index: 5;
     font-size: 18px;
     .logo-side {
-      // height: 80px;
-      // padding: 5px;
-      // width: auto;
       .logo {
         object-fit: contain;
         height: 60px;
         img{
           height: 60px;
           width: auto;
-          border: 2px solid red;
         }
-        // width: auto; 
       }
       .logo1 {
         object-fit :contain;
         img{
           height: 60px;
           width: auto;
-          border: 1px solid red;
         } 
-        // width: auto;
       }
     }
   }
