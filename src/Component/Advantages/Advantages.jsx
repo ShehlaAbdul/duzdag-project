@@ -47,7 +47,7 @@ function Advantages() {
           </div>
           <div className="badge-box">
             <div className="box-container">
-              <h4>40+5</h4>
+              <h4>45+</h4>
               <p>İldir fəaliyyət göstərir</p>
             </div>
           </div>

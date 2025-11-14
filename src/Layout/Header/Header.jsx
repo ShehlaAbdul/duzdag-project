@@ -73,8 +73,8 @@ function Header() {
             <img src={scroll ? LogoWhite : Logo} alt="Logo" />
           </Link>
         </div>  
-        <div className="navbar  d-none d-lg-flex gap-2 align-items-center justify-content-center col-6 ">
-          <ul className="d-flex gap-4 m-0">
+        <div className="navbar  d-none d-lg-flex gap-2 align-items-center justify-content-center col-7 col-lg-7 ">
+          <ul className="d-flex gap-3 m-0">
             <li className="nav-item py-1">
               <NavLink to={"/"} className={linkClass}>
                 Ana səhifə
@@ -114,7 +114,7 @@ function Header() {
         {/* <div className="col-3 border ">
           h
         </div> */}
-        <div className="d-flex justify-content-end align-items-center gap-0 col-3">
+        <div className="d-flex justify-content-end align-items-center gap-0 col-2 ">
           <div className="d-block d-lg-none  " onClick={toggleSidebar}>
             <HiBars3 size={20} className="bar" />
           </div>

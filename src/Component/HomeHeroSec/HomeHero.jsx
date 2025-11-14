@@ -8,10 +8,9 @@ function HomeHero() {
     <section id="hero-sec" className="hero-sec  ">
       <div className="hero-sec-container d-flex  align-items-center">
         <div className="text-side d-flex flex-column">
-          <h1>DuzDağda Sağlamlığınızı Təbii Yolla Bərpa Edin</h1>
+          <h1>Naxçıvanın unikal təbiət möcüzəsi Duzdağ Müalicə Mərkəzi</h1>
           <p>
-            Təbiətin şəfalı gücü və peşəkar yanaşma ilə nəfəsinizi,
-            sağlamlığınızı və rahatlığınızı geri qazanın.
+          Missiyamız — təbii duz mağaralarının şəfasını müasir tibbi texnologiyalarla birləşdirərək, tənəffüs xəstəliklərinin təhlükəsiz və dərmansız müalicəsini təmin etməkdir.
           </p>
           <Link to={"/about"}>
             {" "}

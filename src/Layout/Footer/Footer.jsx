@@ -18,20 +18,21 @@ function Footer() {
         <div className="row">
           <div className="left-side col-12   col-lg-4 ">
             <div className="logo-side d-flex pb-3">
+            <img src={LogoPasha} alt="" className="logo2" />
               <img src={Logo} alt="" className="logo1" />
-              <img src={LogoPasha} alt="" className="logo2" />
+           
             </div>
             <div className="text-side d-flex flex-column gap-2">
               <h3>“ Duzdağ Müalicə Mərkəzi ” MMC</h3>
               <p>
                 {" "}
-                Duzdağ Müalicə Mərkəzi” Məhdud Məsuliyyətli Cəmiyyəti Naxçıvan
+                "Duzdağ Müalicə Mərkəzi” Məhdud Məsuliyyətli Cəmiyyəti Naxçıvan
                 Muxtar Respublikası Həmkarlar İttifaqları Şurasının tabeliyində
                 fəaliyyət göstərir.
               </p>
             </div>
             <div className="icons-side d-flex">
-              <img src={Instagram} alt="" className="icon" />
+           <Link to="https://www.instagram.com/duzdag_mualice_merkezi/">   <img src={Instagram} alt="" className="icon" /></Link>
               <img src={Facebook} alt="" className="icon" />
             </div>
           </div>
@@ -90,7 +91,8 @@ function Footer() {
               </li>
               <li>
                 <GrLocation size={20} />
-                <span>Naxçıvan, Duzdağ dağ massivinin ətəyi</span>
+                <span>Naxçıvan Muxtar Respublikası, Duzdağ dağ massivinin ətəyi</span>
+     
               </li>
             </ul>
           </div>
