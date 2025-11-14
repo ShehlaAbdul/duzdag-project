@@ -39,7 +39,7 @@
       .logo {
         object-fit: cover;
         height: 70px;
-        width: auto;
+        // width: auto; 
       }
       .logo1 {
         object-fit: cover;
@@ -201,12 +201,13 @@
   }
  @media (max-width:576px) {
   .logo-side {
-    gap: 10px !important;
+    // gap: 10px !important;
+    border: 1px solid red;
     .logo1{
-      height: 60px !important;
+      height: 50px !important;
     }
     .logo{
-      height: 60px !important;
+      height: 50px !important;
     }
     width: auto;
     
