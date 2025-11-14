@@ -37,14 +37,14 @@
       // padding: 5px;
       // width: auto;
       .logo {
-        object-fit: cover;
+        object-fit: contain;
         height: 70px;
         // width: auto; 
       }
       .logo1 {
         object-fit: cover;
         height: 70px; 
-        width: auto;
+        // width: auto;
       }
     }
   }
@@ -58,9 +58,10 @@
    
     .logo1 {
         object-fit: contain;
-        height: 60px !important;
-        width: 60px !important;
+        // height: 60px !important;
+        // width: 60px !important;
       }
+      
 
     .navbar a {
       color: #f5efef !important;
@@ -202,14 +203,14 @@
  @media (max-width:576px) {
   .logo-side {
     // gap: 10px !important;
-    border: 1px solid rgb(140, 37, 156);
+    border: 1px solid rgb(18, 216, 94);
     width: 80% !important;
     .logo1{
-      width: auto;
-      height: 60px !important;
+      // width: auto;
+      height: 50px !important;
     }
     .logo{
-      height: 60px !important;
+      height: 50px !important;
     }
    
   }
