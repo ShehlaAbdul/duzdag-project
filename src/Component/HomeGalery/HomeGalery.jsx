@@ -49,7 +49,7 @@ function HomeGalery() {
         </div>
         <div className="galery">
           <Swiper
-            className="mySwiper"
+            className="mySwiper d-none d-md-flex"
             modules={[Navigation]}
             navigation={{
               nextEl: ".swiper-next",
@@ -70,7 +70,7 @@ function HomeGalery() {
               },
             }}
           >
-            {gallery.map((photo) => (
+            {gallery.slice(0, 4).map((photo) => (
               <SwiperSlide key={photo.id}>
                 <div className="img">
                   <img
@@ -81,10 +81,20 @@ function HomeGalery() {
               </SwiperSlide>
             ))}
           </Swiper>
+          <div className='d-flex d-md-none flex-column gap-4'>
+            {gallery.slice(0, 3).map((photo) => (
+              <div className="img">
+                <img
+                  src={`https://admin.duzdagmualice.az/${photo.filename}`}
+                  className="rounded-4"
+                />
+              </div>
+            ))}
+          </div>
           <div className=" d-none d-md-flex gap-3 align-items-center justify-content-center mt-4">
             <div className="chevr">
               {" "}
-              <HiMiniArrowLongLeft className="swiper-prev" size={26}  />
+              <HiMiniArrowLongLeft className="swiper-prev" size={26} />
             </div>
             <div className="chevr">
               <HiMiniArrowLongRight className="swiper-next" size={26} />

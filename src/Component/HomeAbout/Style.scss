@@ -2,16 +2,16 @@
   .home-about {
     padding: 5%;
     min-height: 90vh;
-
     overflow: hidden;
     .text-side {
       padding-right: 5%;
       justify-content: center;
-      // padding-bottom   : 40px;
+      gap: 20px;
       p {
         font-size: 18px;
         color: #465052;
         line-height: 27px;
+        font-weight: 500;
       }
     }
     .img-side {
@@ -80,6 +80,8 @@
             padding-right: 0 !important;
            h1{
             font-size: 20px ;
+        text-transform: uppercase;
+        font-weight: 600;
         }
         p{
             font-size: 16px !important;

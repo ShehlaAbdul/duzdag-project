@@ -1,6 +1,6 @@
 #home-galery  {
     background-color: #F9F9F9;
-    padding: 3% 5%;
+    padding: 5% 5%;
     .home-galery{
         .head-text{
             gap: 16px;
@@ -19,12 +19,9 @@
             padding-top: 40px;
         }
         .img{
-            border: 20px;
             overflow: hidden;
-            img{
-                border: 30px !important;
-                border: 3px solid red;
-            }
+            border-radius:20px !important;
+         
         }
         .chevr{
             border: 1px solid #191919;
@@ -35,6 +32,17 @@
             width: 88px;
             height: 56px;
             border-radius: 70px;
+        }
+    }
+    @media (max-width:768px){
+        .home-galery{
+           .head-text{
+            gap: 10px !important;
+             h1{
+                text-transform: uppercase;
+                font-size: 24px !important;
+            }
+           }
         }
     }
 }

@@ -125,8 +125,7 @@ function Header() {
           <div className="d-flex align-items-center justify-content-between w-100 ">
             <Link to="/" className="navbar-brand">
               <img src={Logo} alt="Logo" className="nav-logo" />
-            </Link>
-            <div className=" ">
+            </Link>          <div className=" ">
               <LiaTimesSolid size={20} onClick={toggleSidebar} />
             </div>
           </div>

@@ -67,7 +67,7 @@ function Sales() {
             }}
             allowTouchMove={false}
             modules={[Autoplay]}
-            className="brands-slider"
+            className="brands-slider d-none d-md-block"
             breakpoints={{
               0: {
                 slidesPerView: 1,
@@ -104,6 +104,21 @@ function Sales() {
               </SwiperSlide>
             ))}
           </Swiper>
+          <div className='d-flex d-md-none flex-column gap-4'>
+            {[...sales, ...sales].map((sale, index) => (
+                <div className="sale-card">
+                  <div className="card-img">
+                    <img src={sale.img} alt="" />
+                  </div>
+                  <p className="sale-desc">{sale.desc}</p>
+                  <div>
+                    <span>Qiymət: </span>
+                    <span className="sale">{sale.sales}</span>
+                    <span>{sale.time}</span>
+                  </div>
+                </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
