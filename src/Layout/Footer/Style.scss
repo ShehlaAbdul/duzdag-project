@@ -5,18 +5,13 @@ footer{
     min-height: 55vh;
     color: #fff;
     .logo-side{
-        gap: 30px;
-       
-        .logo1{
-            width: 167px;
-            height: 100px;
+        max-width: 350px;
+        height: 100px;
+        img{
             object-fit: contain;
+            height: 100%;
         }
-        .logo2{
-            width: 100px;
-            height: 100px;
-            object-fit: contain;
-        }
+    
     }
     .text-side{
         h3{
@@ -81,13 +76,29 @@ footer{
     .footer-bottom{
         border-top: 1px solid #465052;
         padding-top: 20px;
+        @media (max-width:768px){
+            flex-direction: column !important;
+            // gap: 30px;
+        }
     }
     @media (max-width:992px){
         .left-side{
             padding-bottom: 40px;
         }
+         .text-side{
+            margin: 0  !important;
+            p{
+                width: 100% !important;
+            }
+        }
     }
     @media (max-width:576px){
+        .logo-side{
+            height: 60px;
+            width: 80%;
+            
+        }
+        
          .middle-side{
             padding-bottom: 40px;
         }

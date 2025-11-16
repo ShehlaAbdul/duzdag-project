@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./Style.scss";
 import Logo from "../../assets/images/logo-white.png";
-import LogoPasha from "../../assets/images/logo-pasha.webp";
+import LogoPasha from "../../assets/images/logo-pasha2.webp";
+import LogoPasha2 from "../../assets/images/logo_pasha3.webp";
 import Facebook from "../../assets/icons/Facebook.svg";
 import Instagram from "../../assets/icons/Instagram.svg";
 import { FiMail } from "react-icons/fi";
@@ -16,10 +17,15 @@ function Footer() {
     <footer>
       <div className="footer container-fluid g-0">
         <div className="row">
-          <div className="left-side col-12   col-lg-4 ">
-            <div className="logo-side d-flex pb-3">
-              <img src={LogoPasha} alt="" className="logo2" />
+          <div className="left-side col-12   col-lg-5 ">
+            <div className="logo-side d-flex mb-3">
+              <img
+                src={LogoPasha}
+                alt=""
+                className="logo2  d-none d-md-block"
+              />
               <img src={Logo} alt="" className="logo1" />
+              <img src={LogoPasha2} alt="" className="logo1 d-block d-md-none" />
             </div>
             <div className="text-side d-flex flex-column gap-2">
               <h3>“ Duzdağ Müalicə Mərkəzi ” MMC</h3>
@@ -30,7 +36,7 @@ function Footer() {
                 fəaliyyət göstərir.
               </p>
             </div>
-            <div className="icons-side d-flex">
+            <div className="icons-side d-flex align-items-center">
               <Link to="https://www.instagram.com/duzdag_mualice_merkezi/">
                 {" "}
                 <img src={Instagram} alt="" className="icon" />
@@ -38,7 +44,7 @@ function Footer() {
               <img src={Facebook} alt="" className="icon" />
             </div>
           </div>
-          <div className="middle-side col-12 col-sm-6  col-lg-4 ">
+          <div className="middle-side col-12 col-sm-6  col-lg-3 ">
             <h5>Sürətli Keçid</h5>
             <ul className="d-flex flex-column gap-3 m-0 p-0">
               <li>
@@ -100,13 +106,11 @@ function Footer() {
             </ul>
           </div>
         </div>
-        <div className="footer-bottom d-flex justify-content-between mt-4">
-          <div className="right">
-            <p>
-              © 2023 - {new Date().getFullYear()} NMR Həmkarlar İttifaqları
-              Şurası | Bütün Hüquqlar Qorunur.
-            </p>
-          </div>
+        <div className="footer-bottom d-flex  justify-content-between mt-4">
+          <p>
+            © 2023 - {new Date().getFullYear()} NMR Həmkarlar İttifaqları Şurası
+            | Bütün Hüquqlar Qorunur.
+          </p>
           <p className="left">Rzayev Kanan Studio</p>
         </div>
       </div>
