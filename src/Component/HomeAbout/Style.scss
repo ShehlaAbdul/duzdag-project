@@ -7,6 +7,9 @@
       padding-right: 5%;
       justify-content: center;
       gap: 20px;
+      h1{
+        font-size: 40px;
+      }
       p {
         font-size: 18px;
         color: #465052;
@@ -16,10 +19,10 @@
     }
     .img-side {
       height: 90vh;
-      border-radius: 50px 0px;
-      overflow: hidden;
+      // overflow: hidden;
       position: relative;
       .img {
+        border-radius: 50px 0px;
         object-fit: cover;
         height: 100%;
         overflow: hidden;
@@ -35,10 +38,11 @@
         width: 80%;
         height: 30%;
         border-radius: 80px 0 0 0;
-        z-index: 0;
+        z-index: 1;
         position: absolute;
-        bottom: 0;
-        right: 0;
+        bottom: -1px;
+        right: -1px;
+        font-weight: 500;
         .text-content {
           background-color: #efeff1;
           height: 100%;
@@ -54,62 +58,48 @@
       }
     }
   }
-  @media (max-width: 992px) {
+  @media (max-width: 993px) {
     .home-about .row {
       flex-direction: column-reverse;
       .img-side {
-        height: 80vh !important;
+        height: 90vh ;
       }
       .img {
         height: 100% !important;
       }
       .text-side {
         padding-top: 40px;
+        padding-right: 0 !important;
       }
-        .text{
-                border-radius: 60px 0 0 0 ;
-                padding: 20px 0 0 20px !important;
-                height: auto;
-        
-            }
+      .text {
+        border-radius: 60px 0 0 0;
+        padding: 20px 0 0 20px !important;
+        height: auto;
+        width: 55% ;
+      }
     }
   }
-  @media (max-width: 576px) {
-   
-        .text-side{
-            padding-right: 0 !important;
-           h1{
-            font-size: 20px ;
+  @media (max-width:576px){
+    .img-side{
+      height: 60vh !important;
+    }
+    .text-side{
+      gap: 0 !important;
+      h1{
         text-transform: uppercase;
-        font-weight: 600;
-        }
-        p{
-            font-size: 16px !important;
-        }
-        }
-        .img-side{
-            height: 70vh !important;
-        }
-        .text {
-      border-radius: 60px 0 0 0;
-      padding: 20px 0 0 20px !important;
-      .text-content {
-        border-radius: 40px 0 0 0;
-        padding: 3% 10%;
-        h5 {
-          font-size: 16px;
-        }
-        li {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          line-height: 20px;
-          span {
-            font-size: 12px;
-          }
-        }
+        line-height: 140%;
+        padding-top: 10px;
+        font-size: 24px !important;
+
       }
-   
+      p{
+        padding-top: 0 !important;
+      }
+    }
+    .text{
+     width: 90% !important;
+     font-size: 12px;
     }
   }
+
 }

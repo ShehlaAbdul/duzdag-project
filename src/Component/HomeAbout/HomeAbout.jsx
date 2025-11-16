@@ -12,7 +12,7 @@ function HomeAbout() {
     <section id="home-about">
       <div className="home-about container-fluid g-0">
         <div className="row p-0 g-0">
-          <div className="text-side col-12 col-lg-7 d-flex flex-column gap-3 gap-md-3">
+          <div className="text-side col-12 col-lg-7 d-flex flex-column gap-3  m-0  ">
             <div className="about-title">
               <HeadTitle title={"Haqqımızda"} />
             </div>
