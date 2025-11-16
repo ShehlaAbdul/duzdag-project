@@ -8,10 +8,10 @@ function Advantages() {
   return (
     <section id="advantages">
       <div className="advantages container-fluid g-0 row p-0 m-0">
-        <div className="text-side col-12 col-xl-7  ">
-          <div className="head-text">
+        <div className="text-side col-12 col-xl-7 g-0  m-0 ">
+          <div className="head-text ">
             <h1>Sağlamlığınıza Dəyər Qatan Təcrübə</h1>
-            <p>
+            <p className=''>
               Dəniz səviyyəsindən 1100 metr hündürlükdə yerləşən Duzdağ Müalicə
               Mərkəzi 1979-cu ildən fəaliyyət göstərir. Mərkəzin yerləşdiyi
               Duzdağın yeraltı hissəsi labirint şəklindədir və ümumi uzunluğu 46
@@ -42,12 +42,12 @@ function Advantages() {
           </div>
         </div>
         <div className="img-side col-12 col-xl-5 ">
-          <div className="main-img">
-            <img src={MainImg} alt="" />
-          </div>
+            <img src={MainImg} alt=""  className='main-img'/>
+          {/* <div className="main-img">
+          </div> */}
           <div className="badge-box">
             <div className="box-container">
-              <h4>45+</h4>
+              <h4>40+</h4>
               <p>İldir fəaliyyət göstərir</p>
             </div>
           </div>
