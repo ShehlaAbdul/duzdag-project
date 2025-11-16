@@ -1,91 +1,118 @@
+#our-mission {
+//   min-height: 60vh;
+height: 100%;
+  padding: 0 5%;
+  padding-bottom: 5%;
+  .our-mission {
+    height: 100%;
+    display: flex;
+    .img-side {
+       
+      position: relative;
+      height: 100%;
+      .img {
+        border-radius: 50px 0px;
+        object-fit: cover;
+        height: 100vh;
+        overflow: hidden;
+        z-index: 0;
+        img {
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      .text {
+        background-color: #fff;
+        padding: 30px 0px 0px 30px;
+        width: 70%;
+        max-width: 400px;
+        height: 30%;
+        border-radius: 80px 0 0 0;
+        z-index: 1;
+        position: absolute;
+        bottom: -1px;
+        right: -1px;
+        font-weight: 500;
+        .text-content {
+          background-color: #efeff1;
+          height: 100%;
+          width: 100%;
+          border-radius: 50px 0 0 0;
+          padding: 3% 10%;
+          li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+        }
+      }
+    }
+    .text-side {
+      margin: auto;
 
-#our-mission{
-    min-height: 60vh;
-    padding: 0 5%;
-    .our-mission{
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-             .img-side{
-            width: auto;
-            height: 100%;
+      gap: 50px;
+      .vision {
+        padding: 30px 40px;
+        h4 {
+          color: #1b7caf;
+          position: relative;
+          padding-left: 40px;
+          font-size: 20px;
+          font-weight: 700;
+          &:before {
+            content: "";
+            position: absolute;
+            height: 3px;
+            width: 40px;
+            background-color: #1b7caf;
+            left: -10px;
+            top: 50%;
+          }
         }
-        .text-side{
-            margin: auto;
-          
-            gap: 50px;
-            .vision{
-                padding: 30px 40px;
-                h4{
-                    color: #1B7CAF;
-                    position: relative;
-                    padding-left: 40px;
-                    font-size: 20px;
-                    font-weight: 700;
-                    &:before{
-                        content: "";
-                        position: absolute;
-                        height: 3px;
-                        width: 40px;
-                        background-color: #1B7CAF;
-                        left: -10px;
-                        top: 50%;
-                    }
-                }
-                h3{
-                    font-size: 30px;
-                    font-weight: 600;
-                }
-            }
+        h3 {
+          font-size: 30px;
+          font-weight: 600;
         }
+      }
     }
-    @media (max-width:1098px){
-        .our-mission{
-            flex-direction: column;
-            .text-side{
-                padding: 0 !important;
-                .vision{
-                    // padding: 20px 0px;
-                    h4{
-                        // padding-left: 30px;
-                        &:before{
-                            height: 3px;
-                            width: 26px;
-                            left: -1px;
-                            top: 50%;
-                        }
-                    }
-                }
-            }
+      @media (max-width: 993px) {
+      .img-side {
+        height: 70vh ;
+      }
+      .img {
+        height: 100% !important;
+        width: 100%;
+      }
+      .text-side {
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+        width: 100% !important;
+        gap: 0;
+        .vision{
+            padding: 10px 20px !important;
         }
-    }
-    @media (max-width:768px){
-        .our-mission{
-            .img-side{
-                width: 100%;
-                padding: 0;
-            }
-            .text-side{
-                padding: 0;
-                padding: 40px 0px;
-                .vision{
-                    padding: 0;
-                    h4{
-                        font-size: 16px !important;
-                        padding-left: 30px;
-                       &:before{
-                        height: 3px;
-                        width: 26px;
-                        left: -1px;
-                        top: 50%;
-                    }
-                    }
-                    h3{
-                        font-size: 20px !important;
-                    }
-                }
-            }
+        h4{
+            font-size: 16px !important;
         }
-    }
+        h3{
+            font-size: 20px !important;
+        }
+      }
+      .text {
+        border-radius: 60px 0 60px 0 !important;
+        padding: 20px 0 0 20px !important;
+        height: auto;
+        width: 80% !important;
+        right: 20px !important;
+        height: 120px !important;
+        .text-content{
+             border-radius: 50px 0 50px 0 !important;
+        }
+        span{
+            font-size: 12px !important;
+        }
+      }
+  }
+  }
+
 }
