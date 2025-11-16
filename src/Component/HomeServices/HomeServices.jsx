@@ -31,13 +31,13 @@ function HomeServices() {
     {
       id: 2,
       title: "02 FİZİOTERAPİYA PROSEDURLARI",
-      text: "Fizioterapiya bədən funksiyalarını bərpa edir...",
+      text: "Müasir avadanlıqlarla həyata keçirilən fizioterapiya seansları bərpanı sürətləndirir. Ağrıları azaldır və hərəkət qabiliyyətini artırır. Müalicə proqramı fərdi olaraq hazırlanır. Fizioterapiya xəstələrin həyat keyfiyyətini yüksəldir.",
       img: Card2,
     },
     {
       id: 3,
       title: "03 İNHALYASİYA PROSEDURLARI",
-      text: "İnhalyasiya nəfəs yollarını təmizləmək üçün...",
+      text: "Duz aerozolları tənəffüs yollarını təmizləyir və nəfəs almağı asanlaşdırır. Astma və bronxit kimi xəstəliklərin müalicəsində istifadə olunur. Müalicə sakitləşdirici və rahatlaşdırıcı təsir göstərir. İnhalyasiya prosedurları nəfəs yollarının sağlamlığı üçün effektivdir.",
       img: Card3,
     },
   ];
@@ -79,13 +79,14 @@ function HomeServices() {
             bərpa etməyə kömək edirik.
           </p>
         </div>
-        <div className="content-side ">
+        <div className="content-side d-none d-lg-flex">
           {/* SOL TƏRƏF – TABLAR */}
           <div className="tabs">
             {data
               .filter(
                 (item, index) =>
-                  index === active || index === (active + 1) % data.length
+                  index === active ||
+                  index === (active - 1 + data.length) % data.length
               )
               .map((item) => {
                 const realIndex = data.indexOf(item);
@@ -115,23 +116,23 @@ function HomeServices() {
           <div className="content">
             <div className="image">
               <img src={data[active].img} alt={data[active].title} />
-              {/* <div className="img-badge ">
+              <div className="img-badge ">
                 <h4 className="">{data[active].title}</h4>
-                <img src={Vector} alt="" />
-              </div> */}
+                <img src={Vector} alt="" className="vector2" />
+                <img src={Vector} alt="" className="vector1" />
+              </div>
             </div>
             <div className="text-side">
               {/* <h3>{data[active].title}</h3> */}
               <p>{data[active].text}</p>
-              <Link to={"services"}>
+              <Link to={"/services"}>
                 <ReadMoreBtn title={"Bütün Xidmətlər"} />
               </Link>
             </div>
           </div>
         </div>
-        {/* <OurServices className="d-flex"/>
-         */}
-        <div className="services-cards d-none">
+
+        <div className="services-cards d-flex d-lg-none">
           <Swiper
             className="mySwiper"
             modules={[Navigation]}
@@ -140,23 +141,19 @@ function HomeServices() {
               prevEl: ".swiper-prev",
             }}
             breakpoints={{
-              640: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-              },
-              768: {
+              576: {
                 slidesPerView: 2,
                 spaceBetween: 30,
               },
-              1024: {
+              768: {
                 slidesPerView: 3,
-                spaceBetween: 40,
+                spaceBetween: 10,
               },
             }}
           >
             {services.map((service) => (
               <SwiperSlide>
-                <div key={service.id} className="services-card col-3">
+                <div key={service.id} className="services-card col-4">
                   <div className="img">
                     <img
                       src={service.main_img}

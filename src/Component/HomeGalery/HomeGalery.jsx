@@ -82,7 +82,7 @@ function HomeGalery() {
             ))}
           </Swiper>
           <div className='d-flex d-md-none flex-column gap-4'>
-            {gallery.slice(0, 3).map((photo) => (
+            {gallery.slice(0, 5).map((photo) => (
               <div className="img">
                 <img
                   src={`https://admin.duzdagmualice.az/${photo.filename}`}

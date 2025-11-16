@@ -18,9 +18,8 @@ function Footer() {
         <div className="row">
           <div className="left-side col-12   col-lg-4 ">
             <div className="logo-side d-flex pb-3">
-            <img src={LogoPasha} alt="" className="logo2" />
+              <img src={LogoPasha} alt="" className="logo2" />
               <img src={Logo} alt="" className="logo1" />
-           
             </div>
             <div className="text-side d-flex flex-column gap-2">
               <h3>“ Duzdağ Müalicə Mərkəzi ” MMC</h3>
@@ -32,7 +31,10 @@ function Footer() {
               </p>
             </div>
             <div className="icons-side d-flex">
-           <Link to="https://www.instagram.com/duzdag_mualice_merkezi/">   <img src={Instagram} alt="" className="icon" /></Link>
+              <Link to="https://www.instagram.com/duzdag_mualice_merkezi/">
+                {" "}
+                <img src={Instagram} alt="" className="icon" />
+              </Link>
               <img src={Facebook} alt="" className="icon" />
             </div>
           </div>
@@ -91,11 +93,21 @@ function Footer() {
               </li>
               <li>
                 <GrLocation size={20} />
-                <span>Naxçıvan Muxtar Respublikası, Duzdağ dağ massivinin ətəyi</span>
-     
+                <span>
+                  Naxçıvan Muxtar Respublikası, Duzdağ dağ massivinin ətəyi
+                </span>
               </li>
             </ul>
           </div>
+        </div>
+        <div className="footer-bottom d-flex justify-content-between mt-4">
+          <div className="right">
+            <p>
+              © 2023 - {new Date().getFullYear()} NMR Həmkarlar İttifaqları
+              Şurası | Bütün Hüquqlar Qorunur.
+            </p>
+          </div>
+          <p className="left">Rzayev Kanan Studio</p>
         </div>
       </div>
     </footer>
