@@ -1,8 +1,8 @@
 #hero-sec {
   padding: 0 5%;
-  padding-bottom: 5%;
+  // padding-bottom: 5%;
   .hero-sec-container {
-    height: 100vh;
+    height:626px;
     border-radius: 50px;
     background: linear-gradient(to right, #000000d2, #00000053, #00000032),
       url("../../assets/images/home-hero.webp");
@@ -52,7 +52,7 @@
   }
   @media (max-width: 992px) {
     h1 {
-      font-size: 32px !important;
+      font-size: 32px ;
     }
     .hero-badge {
       font-size: 24px;
@@ -62,11 +62,12 @@
 }
 @media (max-width: 768px) {
   #hero-sec{
+    // height: 432px;
     padding-bottom: 10% !important;
 
   }
   .hero-sec-container {
-    height: 80vh !important;
+    height: 432px !important;
     border-radius: 30px !important;
   }
   .text-side {

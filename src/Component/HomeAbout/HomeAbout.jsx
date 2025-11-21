@@ -4,7 +4,9 @@ import HeadTitle from "../HeadTitle/HeadTitle";
 import ReadMoreBtn from "../ReadMoreBtn/ReadMoreBtn";
 import AboutImg from "../../assets/images/about-img.jpg";
 import { GiCheckMark } from "react-icons/gi";
+import { FaCheck } from "react-icons/fa";
 import { Link } from "react-router-dom";
+
 
 
 function HomeAbout() {
@@ -12,7 +14,7 @@ function HomeAbout() {
     <section id="home-about">
       <div className="home-about container-fluid g-0">
         <div className="row p-0 g-0">
-          <div className="text-side col-12 col-lg-7 d-flex flex-column gap-3  m-0  ">
+          <div className="text-side col-12 col-lg-6 d-flex flex-column  m-0  ">
             <div className="about-title">
               <HeadTitle title={"Haqqımızda"} />
             </div>
@@ -35,24 +37,29 @@ function HomeAbout() {
               <ReadMoreBtn title={"Daha Ətraflı"} />
             </Link>
           </div>
-          <div className="img-side  col-12 col-lg-5">
+          <div className="img-side  col-12 col-lg-6">
             <div className="img">
               <img src={AboutImg} alt="" className="" />
             </div>
             <div className="text">
               <div className="text-content">
                 <h5>Əsas dəyərlərimiz</h5>
-                <ul className="d-flex flex-column p-0">
+                <ul className="d-flex flex-column m-0">
                   <li>
-                    <GiCheckMark />
+                    {/* <GiCheckMark /> */}
+                    <FaCheck />
+
                     <span>Təbiətin şəfasına inanırıq</span>
                   </li>
                   <li>
-                    <GiCheckMark />
+                    {/* <GiCheckMark /> */}
+                    <FaCheck />
                     <span>İnsan mərkəzli yanaşma</span>
+                    
                   </li>
                   <li>
-                    <GiCheckMark />
+                    {/* <GiCheckMark /> */}
+                    <FaCheck />
                     <span>Etibar və keyfiyyət</span>
                   </li>
                 </ul>

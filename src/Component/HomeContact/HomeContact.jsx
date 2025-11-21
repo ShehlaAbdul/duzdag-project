@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import Overlay from "../../assets/images/contact-overlay.webp";
 import Swal from "sweetalert2";
 import axios from "axios";
+import ReadMoreBtn from "../ReadMoreBtn/ReadMoreBtn";
 
 
 
@@ -229,12 +230,12 @@ const onSubmit = async (data) => {
             )}
           </div>
 
-          <button type="submit" className="btn btn-primary w-100">
-            Rezervasiya edin
-          </button>
+        <button className="reservation">Rezervasiya edin </button>
         </form>
       </div>
-      <div className="overlay"></div>
+      <div className="overlay">
+            <img src={Overlay} alt="" />
+      </div>
     </section>
   );
 }
