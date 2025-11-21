@@ -43,9 +43,9 @@ function OurServices() {
           </p>
         </div>
         <div className="container-fluid g-0">
-          <div className="services-cards row g-0">
+          <div className="services-cards row g-0 ">
             {services.map((service) => (
-              <div key={service.id} className="services-card col-3">
+              <div key={service.id} className="services-card  ">
                 <div className="img">
                   <img
                     src={service.main_img}

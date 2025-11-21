@@ -1,6 +1,6 @@
 #home-galery  {
     background-color: #F9F9F9;
-    padding: 5% 5%;
+    padding: 44px 5%;
     .home-galery{
         .head-text{
             gap: 16px;
@@ -35,6 +35,7 @@
         }
     }
     @media (max-width:768px){
+        padding: 25px 5% !important;
         .home-galery{
            .head-text{
             gap: 10px !important;

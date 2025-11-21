@@ -1,8 +1,8 @@
 #gallery{
     .gallery-container{
-        padding: 5%;
-        // position: relative;
+        padding: 7% 5%;
         .head-text{
+            padding-bottom: 20px;
             h1{
                 font-size: 40px;
                 color: #1C1C1C;
@@ -24,19 +24,12 @@
                 height: 250px;
                 object-fit: cover;
             }
-          
-           
         }
     }
-//    .skeleton {
-//   width: 100%;
-//   aspect-ratio: 4/3; // daha təmiz
-//   background-color: #e0e0e0;
-//   border-radius: 8px;
-// }
 
     @media (max-width:768px){
        .gallery-container{
+        margin-bottom: 30px;
          img{
             height: 208px !important;
         }

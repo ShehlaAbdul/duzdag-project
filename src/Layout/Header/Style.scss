@@ -2,8 +2,6 @@
   margin-bottom: 80px;
   padding-bottom: 10px;
   width: 100%;
-
-  // padding-bottom: 20px;
   .top-bar {
     padding: 0 5%;
     background-color: #1c1c1c;
@@ -53,23 +51,19 @@
   &.scroll {
     transition: all 0.4s ease;
     .custom-navbar {
-      background-color: #1b7baf65;
-      backdrop-filter: blur(40px); /* əsas blur effekti */
+      background-color: #7b8e9850;
+      backdrop-filter: blur(50px); 
   -webkit-backdrop-filter: blur(10px);
     }
    
     .logo1 {
         object-fit: contain;
-        // height: 60px !important;
-        // width: 60px !important;
       }
       
 
     .navbar a {
-      color: #f5efef !important;
-      &:hover {
-        color: #ffffff !important;
-      }
+      color: #ffffff !important;
+     
     }
     .top-bar {
       height: 0;       // display:none əvəzinə

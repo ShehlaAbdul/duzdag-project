@@ -146,7 +146,7 @@ try {
                 )}
               </div>
 
-              <button type="submit" className="btn btn-primary w-100">
+              <button type="submit" className="btn btn-primary w-100 rounded-5">
                 Rezervasiya edin
               </button>
             </form>

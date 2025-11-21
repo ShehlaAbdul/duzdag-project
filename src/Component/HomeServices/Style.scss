@@ -1,5 +1,6 @@
 #home-services {
   padding: 5%;
+  padding-bottom: 60px;
   .home-services {
     .head-side {
       gap: 16px;
@@ -122,7 +123,6 @@
     }
   }
   .services-cards {
-    margin-top: 30px;
     display: flex;
     // gap: 30px;
     flex-wrap: wrap;
@@ -209,6 +209,16 @@
           left: 100%;
           background-color: #1b7caf;
         }
+      }
+    }
+  }
+  @media (max-width:768px){
+    .head-side{
+      align-items: center;
+      text-align: center;
+      h1{
+        text-transform: uppercase;
+        font-size: 24px;
       }
     }
   }

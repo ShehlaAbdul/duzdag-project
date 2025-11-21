@@ -4,6 +4,7 @@
     padding-top: 90px;
     .text-side{
       padding: 66px 0;
+      padding-right: 5%;
       gap: 10px;
       h1{
         font-size: 40px;
@@ -18,13 +19,16 @@
       }
     }
     .img-side{
-      height: auto;
+      height: 600px;
       position: relative;
-      padding-left: 56px;
+      display: flex;
+      justify-content: flex-end;
       .img{
+        max-width: 500px;
         border-radius: 66px 0;
         overflow: hidden;
         height: 100%;
+        position: relative;
         img{
           object-fit: cover;
 
@@ -68,6 +72,8 @@
     }
     .img-side{
       padding-left: 0 !important;
+     justify-content: center !important;
+     align-items: center;
     }
 
   }
@@ -77,9 +83,13 @@
     }
     .img-side{
       height: 411px !important;
+    .img{
+        border-radius: 46px 0 !important;
+    }
+    
       .text{
-        width: 80% !important;
-        border-radius: 46px !important;
+        width: 90% !important;
+        max-width: 372px !important;
         .text-content{
           border-radius: 46px 0 !important ;
           padding: 12px 24px !important;
@@ -90,11 +100,11 @@
         li{
           font-size: 12px;
         }
-        // height: auto !important;
       }
     }
     .text-side{
-      padding-block: 60px 30px!important;
+      padding-block: 60px 40px!important;
+      padding-right: 0 !important;
       h1{
         font-size: 24px;
         text-transform: uppercase;

@@ -72,7 +72,7 @@ function Header() {
           <Link to={"/"} className="logo ">
             <img src={scroll ? LogoWhite : Logo} alt="Logo" />
           </Link>
-        </div>  
+        </div>
         <div className="navbar  d-none d-lg-flex gap-2 align-items-center justify-content-center col-7 col-lg-7 ">
           <ul className="d-flex gap-3 m-0">
             <li className="nav-item py-1">
@@ -86,10 +86,11 @@ function Header() {
               </NavLink>
             </li>
             <li className="nav-item py-1">
-              <Link to={"/services"} className={linkClass}>
+              <NavLink to={"/services"} className={linkClass}>
                 Xidmətlər
-              </Link>
+              </NavLink>
             </li>
+            
             <li className="galery py-1">
               <NavLink className="galery-link">
                 <span className="pe-1">Qalereya</span>
@@ -125,7 +126,8 @@ function Header() {
           <div className="d-flex align-items-center justify-content-between w-100 ">
             <Link to="/" className="navbar-brand">
               <img src={Logo} alt="Logo" className="nav-logo" />
-            </Link>          <div className=" ">
+            </Link>{" "}
+            <div className=" ">
               <LiaTimesSolid size={20} onClick={toggleSidebar} />
             </div>
           </div>

@@ -1,14 +1,18 @@
 footer {
   padding: 50px 5%;
+  padding-bottom: 20px;
   background-color: #1c1c1c;
   min-height: 55vh;
   color: #fff;
   .logo-side {
     max-width: 350px;
-    height: 100px;
+    height: 106px;
+    gap: 10px;
+    justify-content: space-between !important;
     img {
-      object-fit: contain;
+      object-fit: fill;
       height: 100%;
+      width: auto;
     }
   }
   .text-side {
@@ -71,9 +75,9 @@ footer {
   .footer-bottom {
     border-top: 1px solid #465052;
     padding-top: 20px;
+    margin-top: 70px;
     @media (max-width: 768px) {
       flex-direction: column !important;
-      // gap: 30px;
     }
   }
   @media (max-width: 992px) {
@@ -86,15 +90,19 @@ footer {
         width: 100% !important;
       }
     }
+    .footer-bottom{
+      margin-top: 40px !important;
+    }
   }
   @media (max-width: 576px) {
     .logo-side {
       height: 60px;
-      width: 80%;
+      width: 200px;
     }
 
     .middle-side {
       padding-bottom: 40px;
     }
+    
   }
 }

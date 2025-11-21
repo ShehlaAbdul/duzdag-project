@@ -190,6 +190,9 @@ function HomeServices() {
             <ReadMoreBtn title={"Hamısına bax"} />
           </div> */}
         </div>
+        <div className=" d-flex justify-content-center" >
+          <ReadMoreBtn title={"Bütün Xidmətlər"}></ReadMoreBtn>
+        </div>
       </div>
     </section>
   );

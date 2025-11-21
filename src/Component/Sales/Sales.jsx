@@ -46,7 +46,7 @@ function Sales() {
     ];
   return (
     <section id="sales">
-      <div className="sales container-fluid ">
+      <div className="sales container-fluid m-0 ">
         <div className="head-side pb-5">
           <h1>Qiymət Kateqoriyaları</h1>
           <p>
@@ -71,7 +71,7 @@ function Sales() {
             breakpoints={{
               0: {
                 slidesPerView: 1,
-                spaceBetween: 20,
+                spaceBetween: 30,
               },
               576: {
                 slidesPerView: 2,
@@ -79,11 +79,11 @@ function Sales() {
               },
               768: {
                 slidesPerView: 3,
-                spaceBetween: 20,
+                spaceBetween: 30,
               },
               1048: {
                 slidesPerView: 4,
-                spaceBetween: 10,
+                spaceBetween: 30,
               },
             }}
           >

@@ -4,7 +4,6 @@
     .sales{
         display: flex;
         flex-direction: column;
-        // padding: 0 5%;
         .head-side{
             display: flex;
             flex-direction: column;
@@ -61,6 +60,7 @@
         }
     }
     @media (max-width:768px){
+        padding: 60px 5% !important;
         .sales{
             .head-side{
                 align-items: center;
@@ -73,7 +73,7 @@
                 }
             }
             .sale-card{
-                padding: 20px 0px !important;
+                padding: 22px 0px !important;
             }
             p{
                 font-size: 16px !important;

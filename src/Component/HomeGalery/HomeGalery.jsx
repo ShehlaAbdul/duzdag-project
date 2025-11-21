@@ -101,7 +101,7 @@ function HomeGalery() {
             </div>
           </div>
           <div className=" d-flex d-md-none justify-content-center mt-3">
-            <ReadMoreBtn title={"Hamısına bax"} />
+            <ReadMoreBtn title={"Hamısını gör"} />
           </div>
         </div>
       </div>

@@ -19,13 +19,8 @@ function Footer() {
         <div className="row">
           <div className="left-side col-12   col-lg-5 ">
             <div className="logo-side d-flex mb-3">
-              <img
-                src={LogoPasha}
-                alt=""
-                className="logo2  d-none d-md-block"
-              />
+              <img src={LogoPasha} alt="" className="logo2 " />
               <img src={Logo} alt="" className="logo1" />
-              <img src={LogoPasha2} alt="" className="logo1 d-block d-md-none" />
             </div>
             <div className="text-side d-flex flex-column gap-2">
               <h3>“ Duzdağ Müalicə Mərkəzi ” MMC</h3>
@@ -57,6 +52,12 @@ function Footer() {
                 <Link to={"/services"}>Xidmətlər</Link>
               </li>
               <li>
+                <Link to="/gallery/photos">Şəkillər</Link>
+              </li>
+              <li>
+                <Link to="/gallery/videos">Videolar</Link>
+              </li>
+              {/* <li>
                 <div
                   className={`nav-link galery-mobile d-flex align-items-center ${
                     isOpenGalery ? "active" : ""
@@ -80,7 +81,7 @@ function Footer() {
                     </span>
                   </div>
                 )}
-              </li>
+              </li> */}
               <li>
                 <Link to={"/contact-us"}>Əlaqə</Link>
               </li>
@@ -106,7 +107,7 @@ function Footer() {
             </ul>
           </div>
         </div>
-        <div className="footer-bottom d-flex  justify-content-between mt-4">
+        <div className="footer-bottom d-flex  justify-content-between ">
           <p>
             © 2023 - {new Date().getFullYear()} NMR Həmkarlar İttifaqları Şurası
             | Bütün Hüquqlar Qorunur.

@@ -40,7 +40,6 @@ function HomeAbout() {
           <div className="img-side  col-12 col-lg-6">
             <div className="img">
               <img src={AboutImg} alt="" className="" />
-            </div>
             <div className="text">
               <div className="text-content">
                 <h5>Əsas dəyərlərimiz</h5>
@@ -64,6 +63,7 @@ function HomeAbout() {
                   </li>
                 </ul>
               </div>
+            </div>
             </div>
           </div>
         </div>

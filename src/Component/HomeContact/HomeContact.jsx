@@ -223,7 +223,7 @@ const onSubmit = async (data) => {
               {...register("message", { required: "Mesaj vacibdir" })}
               className="form-control"
               rows="4"
-              placeholder="Mesajınızı yazın..."
+              placeholder="Sizə necə kömək edə bilərik?"
             />
             {errors.message && (
               <p className="text-danger small">{errors.message.message}</p>
